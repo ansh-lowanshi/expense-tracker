@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="budget-input">
+            <input type="number" id="budget" placeholder="Enter your budget for the month">
+            <button onclick="setBudget()">Set Budget</button>
+        </div>
+        <div class="expense-input">
+            <input type="text" id="expense-name" placeholder="Expense Name">
+            <input type="number" id="expense-amount" placeholder="Amount">
+            <input type="datetime-local" id="expense-date" placeholder="Date and Time of Expense">
+            <select id="expense-category">
+                <option value="Night canteen">Night canteen</option>
+                <option value="Canteen">Canteen</option>
+                <option value="Bills">Bills</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <h2>Budget: <span id="budget-display">0</span></h2>
+        <h2>Expenses: <span id="expenses-total">0</span></h2>
+        <h2>Balance: <span id="balance">0</span></h2>
+        <div id="expense-list">
+            <h3>Expenses:</h3>
+            <!-- Expenses will be listed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
